@@ -1,0 +1,87 @@
+/* =====================================================
+   HERO LAYOUT — Added in a separate block to handle
+   the two-column hero grid properly outside section constraints
+   ===================================================== */
+
+/* =====================================================
+   HERO LAYOUT — Two-column grid, fully responsive
+   ===================================================== */
+.hero {
+  display: block !important;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-content-row {
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 60px) 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ===================== TABLET ===================== */
+@media (max-width: 1024px) {
+  .hero-content-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 48px;
+    padding-top: calc(var(--nav-h) + 40px);
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  .hero-avatar-wrap {
+    order: -1; /* Show avatar above text on tablet */
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-scroll-hint {
+    justify-content: center;
+  }
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 768px) {
+  .hero-content-row {
+    padding: calc(var(--nav-h) + 24px) 20px 48px;
+    gap: 36px;
+  }
+
+  .hero-avatar-wrap {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .avatar-badge-1 {
+    left: -10px !important;
+    bottom: 5px !important;
+    font-size: 0.72rem !important;
+    padding: 5px 10px !important;
+  }
+
+  .avatar-badge-2 {
+    right: -10px !important;
+    top: 5px !important;
+    font-size: 0.72rem !important;
+    padding: 5px 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-avatar-wrap {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}
+
