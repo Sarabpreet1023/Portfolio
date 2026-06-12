@@ -76,42 +76,5 @@ python -m http.server 8080
 
 ---
 
-## 🌐 Deployment
-
-### GitHub Pages *(Recommended)*
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Set branch to `main`, folder to `/ (root)`
-4. Live at: `https://<username>.github.io`
-
-### Netlify / Vercel
-Drag and drop the project folder at [netlify.com](https://netlify.com) or connect your GitHub repo — zero config needed.
-
----
-
-## ✏️ Customization
-
-All design tokens live in `style.css` under `:root {}`:
-
-```css
---clr-accent:   #5eead4;   /* Teal  */
---clr-accent-2: #818cf8;   /* Indigo */
---clr-accent-3: #f472b6;   /* Pink  */
-```
-
-To update personal info, edit the relevant sections in `index.html`.  
-To change the contact form email, replace the Formspree endpoint in `js/main.js`.
-
----
-
-## 📬 Contact Form Setup
-
-This portfolio uses [Formspree](https://formspree.io) to forward contact form submissions to email.  
-The endpoint is already configured. To use your own:
-1. Sign up at formspree.io
-2. Create a new form → copy your endpoint URL
-3. Replace the URL in `js/main.js` → `handleFormSubmit` function
-
----
 
 © 2025 Sarabpreet Singh. All rights reserved.
